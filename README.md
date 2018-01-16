@@ -57,10 +57,10 @@ $ ./zcutil/fetch-params.sh
 
 Ensure you have successfully installed all system package dependencies as described above. Then run the build, e.g.:
 ```{r, engine='bash'}
-$ ./zcutil/build.sh --disable-rust -j$(nproc)
+$ ./zcutil/build.sh -j$(nproc)
 ```
 
-This should compile our dependencies and build ```litecoinzd```. (Note: if you don't have ```nproc```, then substitute the number of cores on your system. If the build runs out of memory, try again without the ```-j``` argument, i.e. just ```./zcutil/build.sh --disable-rust```. )
+This should compile our dependencies and build ```litecoinzd```. (Note: if you don't have ```nproc```, then substitute the number of cores on your system. If the build runs out of memory, try again without the ```-j``` argument, i.e. just ```./zcutil/build.sh```. )
 
 ### Configuration
 
@@ -116,6 +116,9 @@ To get help with a particular command, use ```./src/litecoinz-cli help <command>
 ### Windows
 
 - Download Windows release binary [here](https://litecoinz.info/downloads/litecoinz-1014-win64.zip)
+- Fetch parameter files [here](https://litecoinz.info/downloads/sprout.zip) and uncompress the content inside the folder ```"C:\Users\%username%\AppData\Roaming\LitecoinZParams"```
+- Manually edit the ```litecoinz.conf``` file inside the folder ```"C:\Users\%username%\AppData\Roaming\LitecoinZ"```
+- Run ```litecoinzd.exe``` 
 
 
 ### Do you need a Wallet GUI?
@@ -135,5 +138,3 @@ TO DO
 -----
 - QT Wallet
 - Backports from Bitcoin 0.12+
-
-
